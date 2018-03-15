@@ -1,0 +1,12 @@
+CC=g++
+
+CFLAGS=-c -Wall
+all: hello
+
+hello: MasterBranch.o
+	$(CC) MasterBranch.o -o hello
+MasterBranch.o: MasterBranch.cpp
+	$(CC) $(CFLAGS) MasterBranch.cpp
+
+clean:
+	rm -rf *o hello
