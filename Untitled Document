@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string imie,pseudonim,nazwisko,calosc;
+    cout << "Podaj imie, pseudonim i nazwisko"<< endl;
+    cin >> imie >> pseudonim >> nazwisko;
+    cout << imie <<" "<<  pseudonim <<" "<<nazwisko<< endl;
+   }
