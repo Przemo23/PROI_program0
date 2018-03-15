@@ -8,4 +8,22 @@ int main()
     cout << "Podaj imie, pseudonim i nazwisko"<< endl;
     cin >> imie >> pseudonim >> nazwisko;
     cout << imie <<" "<<  pseudonim <<" "<<nazwisko<< endl;
-   }
+    size_t pozycja_imie = imie.find_first_of("AEIOUYaeiouy");
+    while(pozycja_imie!=string::npos)
+    {
+        imie[pozycja_imie]='z';
+        pozycja_imie = imie.find_first_of("AEIOUYaeiouy",pozycja_imie+1);
+    }
+    size_t pozycja_pseudonim = pseudonim.find_first_of("AEIOUYaeiouy");
+    while(pozycja_pseudonim!=string::npos)
+    {
+        pseudonim[pozycja_pseudonim]='z';
+        pozycja_pseudonim = nazwisko.find_first_of("AEIOUYaeiouy",pozycja_pseudonim+1);
+    }
+    size_t pozycja_nazwsiko = nazwisko.find_first_of("AEIOUYaeiouy");
+    while(pozycja_nazwsiko!=string::npos)
+    {
+        nazwisko[pozycja_nazwsiko]='z';
+        pozycja_nazwsiko = nazwisko.find_first_of("AEIOUYaeiouy",pozycja_nazwsiko+1);
+    }
+}
